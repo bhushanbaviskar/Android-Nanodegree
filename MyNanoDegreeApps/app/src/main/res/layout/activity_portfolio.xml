@@ -1,92 +1,81 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#b2e1f2"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".PortfolioActivity">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:id="@+id/scrollView"
+    >
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/my_nano_degree"
-        android:id="@+id/textViewMyNanoDegree"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"/>
-
-    <Button
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/spotify"
-        android:id="@+id/buttonSpotify"
-        android:layout_below="@+id/textViewMyNanoDegree"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
-        android:background="#F08C35"
-        android:paddingRight="10dp"/>
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:background="@color/app_background_color"
+        tools:context=".PortfolioActivity">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/scores"
-        android:id="@+id/buttonScores"
-        android:layout_below="@+id/buttonSpotify"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
-        android:background="#F08C35"
-        android:layout_centerHorizontal="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/my_nano_degree"
+            android:id="@+id/textViewMyNanoDegree"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/library"
-        android:id="@+id/buttonLibrary"
-        android:layout_below="@+id/buttonScores"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
-        android:background="#F08C35"
-        android:layout_centerHorizontal="true" />
+        <Button
+            style="@style/commonButtonAttributes"
+            android:text="@string/spotify"
+            android:id="@+id/buttonSpotify"
+            android:layout_below="@+id/textViewMyNanoDegree"
+            android:layout_marginTop="50dp"
+            android:background="@color/app_button_color"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/build_it_bigger"
-        android:id="@+id/buttonBuildIt"
-        android:layout_below="@+id/buttonLibrary"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
-        android:background="#F08C35"
-        android:layout_centerHorizontal="true" />
+        <Button
+            style="@style/commonButtonAttributes"
+            android:text="@string/scores"
+            android:id="@+id/buttonScores"
+            android:layout_below="@+id/buttonSpotify"
+            android:layout_marginTop="10dp"
+            android:background="@color/app_button_color"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/xyz"
-        android:id="@+id/buttonXYZ"
-        android:layout_below="@+id/buttonBuildIt"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
-        android:background="#F08C35"
-        android:layout_centerHorizontal="true" />
+        <Button
+            style="@style/commonButtonAttributes"
+            android:text="@string/library"
+            android:id="@+id/buttonLibrary"
+            android:layout_below="@+id/buttonScores"
+            android:layout_marginTop="10dp"
+            android:background="@color/app_button_color"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/capstone"
-        android:id="@+id/buttonCapStone"
-        android:layout_below="@+id/buttonXYZ"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
-        android:background="#b63234"
-        android:layout_centerHorizontal="true" />
-</RelativeLayout>
+        <Button
+            style="@style/commonButtonAttributes"
+            android:text="@string/build_it_bigger"
+            android:id="@+id/buttonBuildIt"
+            android:layout_below="@+id/buttonLibrary"
+            android:layout_marginTop="10dp"
+            android:background="@color/app_button_color"/>
+
+        <Button
+            style="@style/commonButtonAttributes"
+            android:text="@string/xyz"
+            android:id="@+id/buttonXYZ"
+            android:layout_below="@+id/buttonBuildIt"
+            android:layout_marginTop="10dp"
+            android:background="@color/app_button_color"/>
+
+        <Button
+            style="@style/commonButtonAttributes"
+            android:text="@string/capstone"
+            android:id="@+id/buttonCapStone"
+            android:layout_below="@+id/buttonXYZ"
+            android:layout_marginTop="10dp"
+            android:background="@color/app_capstone_button_color"/>
+    </RelativeLayout>
+
+
+
+</ScrollView>
